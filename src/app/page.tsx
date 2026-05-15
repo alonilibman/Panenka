@@ -27,9 +27,12 @@ export default function Home() {
             </p>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
               <p className="text-gray-500 mb-6">Your squad is empty. Ready to scout some talent?</p>
-              <button className="bg-black text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">
+              <Link 
+                href="/database"
+                className="inline-block bg-black text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform"
+              >
                 Start Building
-              </button>
+              </Link>
             </div>
           </div>
         ) : (
@@ -37,12 +40,20 @@ export default function Home() {
             <p className="text-xl text-gray-600">
               The ultimate World Cup fantasy experience.
             </p>
-            <Link 
-              href="/login"
-              className="inline-block bg-black text-white px-12 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg"
-            >
-              Enter the Arena
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link 
+                href="/login"
+                className="inline-block bg-black text-white px-12 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg"
+              >
+                Enter the Arena
+              </Link>
+              <Link 
+                href="/database"
+                className="inline-block bg-white text-black border-2 border-gray-200 px-12 py-4 rounded-full font-bold hover:bg-gray-50 transition-colors"
+              >
+                Scout Database
+              </Link>
+            </div>
           </div>
         )}
       </div>
